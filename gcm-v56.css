@@ -1,0 +1,159 @@
+
+*{box-sizing:border-box}body{margin:0;background:#0b1913;color:#f5f3e8;font-family:Inter,Arial}header{padding:19px 26px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #526554}.logo{font:32px Anton}.logo small{display:block;font:800 11px Inter;letter-spacing:2px}.mono{font:11px 'IBM Plex Mono',monospace;letter-spacing:1px;color:#d1e1d0}main{display:grid;grid-template-columns:225px minmax(400px,1fr) 315px;height:calc(100vh - 118px);min-height:630px}aside,.panel{padding:23px 18px;overflow:auto}aside{border-right:1px solid #526554}.panel{border-left:1px solid #526554}h1,h2{font-family:Anton;font-weight:400;line-height:1.03}h1{font-size:53px;margin:25px 0}h1 em{font-style:normal;color:#FFC14B}h2{font-size:34px}.eyebrow{color:#FFC14B;font:11px 'IBM Plex Mono'}button{cursor:pointer}.nav,.layer{display:block;width:100%;background:transparent;color:#f4f2e7;text-align:left;border:0;border-bottom:1px solid #405547;padding:15px 3px;font:700 11px Inter;letter-spacing:.5px}.nav.active,.layer.active{color:#FFC14B}.nav:before{content:"○ ";margin-right:8px}.nav.active:before{content:"● "}.mapwrap{position:relative}#map{position:absolute;inset:0;background:#10231c}.top{position:absolute;z-index:600;top:18px;left:20px;right:20px;display:flex;justify-content:space-between;align-items:center;gap:10px;pointer-events:none}.top>*{pointer-events:auto}.top span{padding:12px;background:#0b1913e8;font:11px 'IBM Plex Mono'}input[type=search]{background:#0b1913eb;color:white;border:1px solid #8d9a8e;padding:12px;width:230px}.time{position:absolute;z-index:600;bottom:20px;left:20px;right:20px;padding:14px 20px;background:#0b1913ec;border:1px solid #6b816e}.time strong{font:32px Anton}.time input{width:100%;accent-color:#FFC14B}.ticks{display:flex;justify-content:space-between;font:10px 'IBM Plex Mono'}.panel p{color:#bfccbf;font-size:12px;line-height:1.7}.section{font:11px 'IBM Plex Mono';color:#FFC14B;letter-spacing:1px;margin-top:22px;padding-top:14px;border-top:1px solid #536654}.layer{border:1px solid #536654;margin-top:7px;padding:11px}.layer.active{background:#FFC14B;color:#122016}.regions{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}.regions button{background:transparent;border:1px solid #708472;color:white;padding:9px;font:10px 'IBM Plex Mono'}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:7px}.metrics div{padding:12px;background:#1b3024}.metrics small{font-size:10px;color:#c4d1c3}.metrics b{display:block;font:26px Anton;color:#FFC14B;margin-top:7px}.status{font:10px/1.6 'IBM Plex Mono';color:#FFC14B;margin-top:12px}.fine{font:10px/1.6 'IBM Plex Mono'!important;color:#b8c4b7!important}.leaflet-container{background:#10231c}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#15291f;color:#fff;border-radius:0}footer{height:42px;padding:12px 25px;border-top:1px solid #536654;font:10px 'IBM Plex Mono';color:#bac8b9;display:flex;justify-content:space-between}a{color:#FFC14B}@media(max-width:900px){main{display:flex;flex-direction:column;height:auto}aside{border-right:0}.navs{display:flex;overflow:auto;gap:12px}.nav{min-width:max-content}h1{font-size:37px;margin:12px 0}.mapwrap{height:620px}.panel{border-left:0;border-top:1px solid #536654}.top span{display:none}input[type=search]{width:100%}footer{height:auto;gap:10px;flex-wrap:wrap}}
+.layer:focus-visible,.nav:focus-visible{outline:2px solid #FFC14B}#climatecompare{white-space:pre-line} .source-link{display:block;margin-top:8px;font:10px IBM Plex Mono,monospace} 
+#quickReadout{position:absolute;z-index:650;top:67px;left:22px;max-width:320px;background:#0b1913ed;border:1px solid #708472;padding:15px;color:#f5f3e8;box-shadow:0 4px 18px #0006;font-family:Inter,Arial;pointer-events:none}
+#quickReadout[hidden]{display:none}#quickReadout .qtitle{font:12px 'IBM Plex Mono',monospace;color:#FFC14B;letter-spacing:1px}#quickReadout .qvalue{font:36px Anton,sans-serif;margin:7px 0}#quickReadout .qsub{font:11px/1.5 Inter,Arial;color:#d0d8cc}#quickReadout .qplace{font:12px Inter,Arial;margin-top:8px;font-weight:700}#quickReadout .qsource{font:10px/1.5 'IBM Plex Mono',monospace;color:#aebbad;margin-top:10px}@media(max-width:900px){#quickReadout{left:10px;right:10px;top:55px;max-width:290px}}
+#weatherMotion{position:absolute;inset:0;width:100%;height:100%;z-index:470;pointer-events:none}#visualLegend{position:absolute;z-index:620;bottom:117px;left:23px;padding:8px 10px;background:#0b1913e9;border:1px solid #6c876f;color:#f3ebd5;font:10px/1.4 'IBM Plex Mono',monospace;letter-spacing:.2px;pointer-events:none}#visualLegend[hidden]{display:none}@media(max-width:900px){#visualLegend{bottom:115px;left:10px;max-width:80%}}
+#radarControls{position:absolute;z-index:650;left:20px;top:56px;width:294px;background:rgba(8,25,19,.96);padding:12px 14px;border:1px solid #8a9e87;font:10px/1.6 "IBM Plex Mono",monospace;color:#e9efdf;box-shadow:0 5px 24px #0006}
+#radarControls[hidden]{display:none}.radar-head{display:flex;justify-content:space-between;gap:7px;flex-wrap:wrap;color:#FFC14B}.radar-actions{display:flex;gap:6px;margin:10px 0}.radar-actions button{background:#162f20;border:1px solid #7b947a;color:white;padding:8px;flex:1;font:10px "IBM Plex Mono",monospace}.radar-actions button:hover{border-color:#FFC14B}#radarFrame{width:100%;accent-color:#FFC14B}#radarExplanation{color:#dce7d7;margin:6px 0}#radarCredit{color:#c6cfbf;font-size:9px}#radarCredit a{color:#FFC14B}#radarClock{color:white}#radarControls button:focus-visible{outline:2px solid #FFC14B}@media(max-width:900px){#radarControls{left:10px;top:65px;width:min(300px,calc(100% - 20px))}}
+#quickReadout:has(#qtitle) .qsource{line-height:1.55;overflow-wrap:anywhere} 
+/* Layout polish 06: keep navigation controls, title and weather cards distinct. */
+.mapwrap .leaflet-top.leaflet-left{top:12px;left:12px}
+.mapwrap .top{left:78px;top:18px}
+#quickReadout{left:78px;top:87px}
+#radarControls{left:78px;top:87px}
+/* When radar and the local rainfall readout are both present, place them side by side. */
+.mapwrap:has(#radarControls:not([hidden])) #quickReadout:not([hidden]){left:395px;top:87px;max-width:min(310px,calc(100% - 415px))}
+@media(max-width:900px){
+ .mapwrap .top{left:68px;right:10px;top:12px}
+ #radarControls{left:10px;top:77px;width:min(300px,calc(100% - 20px))}
+ #quickReadout{left:10px;top:77px;right:auto;max-width:min(300px,calc(100% - 20px))}
+ .mapwrap:has(#radarControls:not([hidden])) #quickReadout:not([hidden]){left:10px;top:342px;max-width:min(300px,calc(100% - 20px))}
+}
+
+/* Temperature field: sampled Open-Meteo forecast, interpolated on client. */
+#temperatureCanvas{position:absolute;inset:0;width:100%;height:100%;z-index:415;pointer-events:none;opacity:1}
+#temperatureControls{position:absolute;z-index:650;top:92px;left:60px;width:min(325px,calc(100% - 90px));background:#0b1913ed;border:1px solid #708472;padding:12px;color:#f5f3e8;font:11px 'IBM Plex Mono',monospace;box-shadow:0 5px 20px #0008}
+#temperatureControls[hidden],#temperatureCanvas[hidden]{display:none}
+#temperatureControls strong{color:#FFC14B;letter-spacing:.7px}
+#temperatureControls .trow{display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:9px}
+#temperatureControls button{background:#FFC14B;color:#122016;border:0;padding:8px 10px;font:800 11px Inter}
+#temperatureControls button:disabled{opacity:.5;cursor:default}
+#temperatureControls input{width:100%;accent-color:#FFC14B}
+#temperatureControls small{display:block;color:#b8c4b7;line-height:1.5;margin-top:8px}
+#tempScale{display:flex;height:13px;margin-top:9px;background:linear-gradient(90deg,#2955b3,#4a9cdf,#75c9bd,#a3cb77,#FFC14B,#f8964b,#e14938,#941e38);border:1px solid #708472}
+#temperatureControls .scale-labels{display:flex;justify-content:space-between;color:#d1e1d0;font-size:9px;margin-top:3px}
+@media(max-width:900px){#temperatureControls{left:10px;top:112px;width:min(310px,calc(100% - 20px))}}
+
+/* Repair 09: independent, nonoverlapping weather panels */
+.mapwrap:has(#temperatureControls:not([hidden])) #temperatureControls{left:78px;top:92px;width:315px;max-width:calc(100% - 100px)}
+.mapwrap:has(#temperatureControls:not([hidden])) #quickReadout:not([hidden]){left:410px;top:92px;width:285px;max-width:calc(100% - 430px)}
+@media(max-width:850px){
+ .mapwrap:has(#temperatureControls:not([hidden])) #temperatureControls{left:68px;top:90px;width:min(320px,calc(100% - 80px))}
+ .mapwrap:has(#temperatureControls:not([hidden])) #quickReadout:not([hidden]){left:68px;top:335px;width:min(320px,calc(100% - 80px));max-width:none}
+}
+
+/* Repair 11 — inset, aligned map UI, clear space for Leaflet zoom buttons. */
+.mapwrap .leaflet-top.leaflet-left{top:14px;left:14px}
+.mapwrap .top{left:82px;right:18px;top:18px;align-items:flex-start;gap:14px}
+.mapwrap .top #maplabel{display:block;max-width:min(65%,680px);line-height:1.35;overflow-wrap:break-word;padding:11px 14px}
+.mapwrap .top #search{flex:0 0 230px;max-width:36%;min-width:145px}
+#radarControls,#temperatureControls,.mapwrap:has(#temperatureControls:not([hidden])) #temperatureControls{left:82px;top:88px;width:315px;max-width:calc(100% - 104px)}
+#quickReadout{left:82px;top:88px;width:285px;max-width:calc(100% - 104px)}
+.mapwrap:has(#radarControls:not([hidden])) #quickReadout:not([hidden]),
+.mapwrap:has(#temperatureControls:not([hidden])) #quickReadout:not([hidden]){left:414px;top:88px;width:285px;max-width:calc(100% - 436px)}
+/* Stack cards when the central map is not wide enough for two cards. */
+@media(max-width:1300px){
+ .mapwrap:has(#radarControls:not([hidden])) #quickReadout:not([hidden]),
+ .mapwrap:has(#temperatureControls:not([hidden])) #quickReadout:not([hidden]){left:82px;top:360px;width:315px;max-width:calc(100% - 104px)}
+}
+@media(max-width:900px){
+ .mapwrap .top{left:68px;right:12px;top:14px}
+ .mapwrap .top #maplabel{max-width:60%;padding:10px}
+ .mapwrap .top #search{max-width:40%;min-width:120px}
+ #radarControls,#temperatureControls,.mapwrap:has(#temperatureControls:not([hidden])) #temperatureControls{left:18px;top:82px;width:min(315px,calc(100% - 36px));max-width:calc(100% - 36px)}
+ #quickReadout{left:18px;top:82px;width:min(315px,calc(100% - 36px));max-width:calc(100% - 36px)}
+ .mapwrap:has(#radarControls:not([hidden])) #quickReadout:not([hidden]),
+ .mapwrap:has(#temperatureControls:not([hidden])) #quickReadout:not([hidden]){left:18px;top:360px;width:min(315px,calc(100% - 36px));max-width:calc(100% - 36px)}
+}
+
+/* Repair 12: official Copernicus global drought imagery, uncluttered inset panel */
+#droughtControls{position:absolute;z-index:610;left:82px;top:88px;width:316px;max-width:calc(100% - 104px);background:rgba(8,25,18,.95);border:1px solid #60755f;color:#f6f4e8;padding:13px;font:11px/1.55 'IBM Plex Mono',monospace;box-shadow:0 5px 20px #07110c55}
+#droughtControls[hidden]{display:none!important}
+#droughtControls strong{color:#FFC14B;font-size:12px;letter-spacing:.6px}
+#droughtControls .drought-actions{display:flex;gap:7px;margin:10px 0}
+#droughtControls button{border:1px solid #7b947f;background:#0e2418;color:#f4f2e8;padding:9px 10px;font:700 10px Inter;flex:1;cursor:pointer}
+#droughtControls button.active{background:#FFC14B;color:#101b12;border-color:#FFC14B}
+#droughtControls img{display:block;max-width:100%;max-height:72px;object-fit:contain;background:#fafafa;margin:7px 0;border:1px solid #768777}
+#droughtControls p{color:#d0d8ce;font-size:10px;margin:6px 0}
+#droughtControls a{color:#FFC14B}
+.mapwrap:has(#droughtControls:not([hidden])) #quickReadout:not([hidden]){left:414px;top:88px;width:285px;max-width:calc(100% - 436px)}
+@media(max-width:1300px){.mapwrap:has(#droughtControls:not([hidden])) #quickReadout:not([hidden]){left:82px;top:390px;width:315px;max-width:calc(100% - 104px)}}
+@media(max-width:900px){#droughtControls{left:18px;top:82px;max-width:calc(100% - 36px);width:315px}.mapwrap:has(#droughtControls:not([hidden])) #quickReadout:not([hidden]){left:18px;top:390px;max-width:calc(100% - 36px)}}
+
+/* Repair 14 — readable Copernicus drought raster, with the geography preserved. */
+.leaflet-overlay-pane img.gcm-drought-image{mix-blend-mode:multiply!important;image-rendering:auto!important;}
+/* Cosmetic-only smoothing of low-resolution source pixels; no scientific resampling. */
+.leaflet-overlay-pane img.gcm-drought-image{filter:blur(var(--gcm-drought-blur, 8px));image-rendering:auto!important;will-change:auto;pointer-events:none;}
+#droughtControls{width:330px}
+#droughtControls .drought-visibility{margin:9px 0 4px;display:flex;align-items:center;gap:9px;color:#d1e1d0;font:10px 'IBM Plex Mono',monospace}
+#droughtControls .drought-visibility input{width:100%;min-width:70px;accent-color:#FFC14B}
+#droughtControls .drought-visibility output{min-width:33px;text-align:right;color:#FFC14B}
+#droughtControls .drought-key{font:10px/1.55 'IBM Plex Mono',monospace;color:#d1e1d0;padding:8px 0;border-top:1px solid #435647;margin-top:9px}
+#droughtControls .drought-key b{color:#FFC14B}
+#droughtControls .drought-actions button{white-space:nowrap}
+@media(max-width:900px){#droughtControls{width:315px}}
+
+/* Repair 18 — simple basemap toggle, below the search and inside the map. */
+.gcm-view-switch{position:absolute;z-index:670;top:75px;right:18px;display:flex;gap:3px;padding:4px;background:rgba(9,25,18,.94);border:1px solid #708472;box-shadow:0 3px 12px #0005}
+.gcm-view-switch button{border:0;background:transparent;color:#f5f3e8;font:700 10px Inter,Arial,sans-serif;letter-spacing:.4px;padding:9px 13px;min-width:70px}
+.gcm-view-switch button.selected{background:#FFC14B;color:#102016}
+.gcm-view-switch button:focus-visible{outline:2px solid #fff;outline-offset:1px}
+@media(max-width:900px){.gcm-view-switch{right:12px;top:64px}.gcm-view-switch button{min-width:55px;padding:8px}}
+
+/* Flood monitor: distinct from map zoom and search controls */
+#floodControls{position:absolute;z-index:690;top:76px;left:74px;width:330px;max-width:calc(100% - 100px);padding:13px 15px;background:#0b1913f2;border:1px solid #657761;color:#f5f3e8;font:10px/1.5 'IBM Plex Mono',monospace;box-shadow:0 8px 25px #0006}
+#floodControls[hidden],#floodOpacityWrap[hidden],#floodLegend[hidden]{display:none!important}
+#floodControls>strong{display:block;color:#FFC14B;font-size:12px;margin-bottom:9px}
+.flood-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.flood-actions button{font:700 10px Inter,Arial;padding:10px 4px;color:white;border:1px solid #708472;background:transparent;cursor:pointer}
+.flood-actions button.active{color:#102016;background:#FFC14B;border-color:#FFC14B}
+.flood-actions button:disabled{opacity:.5;cursor:wait}
+.flood-sub{margin:11px 0 8px;color:#d3ded2}
+#floodFeedback{margin:9px 0;color:#FFC14B;font-size:10px}
+#floodControls small{display:block;color:#abbba9;margin:7px 0}
+#floodControls a{font-size:10px;color:#FFC14B}
+.flood-visibility{display:flex;gap:7px;align-items:center;margin-top:9px}
+.flood-visibility input{flex:1;min-width:55px;accent-color:#FFC14B}
+.flood-legend{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+.flood-legend span{display:flex;align-items:center;gap:4px;font-size:9px}
+.flood-legend i{display:block;width:10px;height:10px}
+@media(max-width:680px){#floodControls{left:16px;top:110px;width:300px;max-width:calc(100% - 32px)}}
+
+.gcm-search-controls{display:flex;gap:8px;align-items:center;justify-content:flex-end;min-width:0}
+#clearLocationPin{background:#12241bdc;color:#FFC14B;border:1px solid #91a087;padding:10px 11px;font:700 10px 'IBM Plex Mono',monospace;white-space:nowrap;cursor:pointer}
+#clearLocationPin[hidden]{display:none!important}
+#clearLocationPin:hover,#clearLocationPin:focus-visible{background:#FFC14B;color:#102016}
+@media(max-width:700px){.gcm-search-controls{gap:4px}#clearLocationPin{padding:8px;font-size:9px}}
+
+/* WILDFIRE MAP — compact mobile-first controls */
+#fireControls{position:absolute;z-index:605;top:158px;left:78px;width:285px;max-width:calc(100% - 105px);padding:13px 14px;background:#0b211beF;border:1px solid #516b59;box-shadow:0 8px 24px #0005;color:#f4f2e7;font:11px/1.5 'IBM Plex Mono',monospace}
+#fireControls[hidden]{display:none!important}
+#fireControls strong{display:block;color:#FFC14B;font-size:11px;letter-spacing:.5px}
+.fire-actions{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:9px 0}
+.fire-actions button{background:#13251e;border:1px solid #6c806e;color:#f5f3e8;font:700 10px Inter,sans-serif;min-height:35px;cursor:pointer;padding:7px 4px}
+.fire-actions button.active{background:#FFC14B;color:#102016;border-color:#FFC14B}
+#fireFeedback{font:10px/1.5 'IBM Plex Mono',monospace;color:#dfeddb;margin:9px 0}
+#fireDate{font:10px/1.5 'IBM Plex Mono',monospace;color:#FFC14B}
+#fireUpdate{grid-column:1/-1}
+#fireControls .fire-credit{font-size:10px;color:#b6c7b7}
+#fireControls a{color:#FFC14B}
+.gcm-fire-report p{margin:7px 0;line-height:1.45}.gcm-fire-report strong{font-size:13px}.gcm-fire-report .fire-report-note{font-size:11px;color:#bac9be}
+#fireControls .fire-disclaimer{font:10px/1.5 'IBM Plex Mono',monospace;color:#b6c7b7}
+@media(max-width:680px){#fireControls{top:160px;left:16px;width:265px;max-width:calc(100% - 32px);padding:10px}.fire-actions button{min-height:39px}}
+#gcmHistoricalTimeline{z-index:610}#gcmHistoricalTimeline .gcm-time-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:5px}#gcmHistoricalTimeline .gcm-time-head strong{display:block;margin:3px 0;font-size:24px}#gcmHistoricalTimeline .gcm-time-actions{display:flex;gap:5px;flex-wrap:wrap}#gcmHistoricalTimeline .gcm-time-actions button{padding:9px 11px;background:#152a21;color:#faf9f1;border:1px solid #738773;font:700 10px Inter,sans-serif;min-height:35px}#gcmHistoricalTimeline .gcm-time-actions button:hover,#gcmHistoricalTimeline .gcm-time-actions button:focus-visible{background:#FFC14B;color:#0b1913}#gcmHistoricalTimeline .gcm-time-actions button:disabled{opacity:.4}#gcmTimelineNote{margin-top:6px}@media(max-width:650px){#gcmHistoricalTimeline .gcm-time-head{align-items:start;flex-direction:column}#gcmHistoricalTimeline{bottom:10px;left:10px;right:10px;padding:10px}#gcmHistoricalTimeline .gcm-time-actions button{min-height:34px}}
+
+/* Accessible mouse/touch scrubbing; map drags should never steal timeline gestures. */
+#gcmHistoricalTimeline #year{display:block;width:100%;height:30px;cursor:pointer;touch-action:none;pointer-events:auto;position:relative;z-index:3;accent-color:#FFC14B}
+#gcmHistoricalTimeline #year::-webkit-slider-thumb{cursor:grab}
+#gcmHistoricalTimeline #year:active::-webkit-slider-thumb{cursor:grabbing}
+#gcmHistoricalTimeline{pointer-events:auto}
+
+/* Compact text-only header, using the same Anton typeface as the GCM headline. */
+header{min-height:76px;padding:14px 24px;gap:22px}
+.gcm-header-brand{flex:0 1 auto;min-width:0;display:flex;align-items:center}
+.gcm-logo-main{font:400 clamp(23px,2.4vw,33px)/1 Anton,Impact,sans-serif;white-space:nowrap;color:#f5f3e8;letter-spacing:.2px}
+.gcm-logo-accent{color:#FFC14B}
+header>.mono{white-space:nowrap;text-align:right;flex:0 1 auto;font-size:10px}
+@media(max-width:900px){header{padding:12px 16px;gap:12px}.gcm-logo-main{font-size:clamp(20px,3vw,27px)}header>.mono{font-size:9px}}
+@media(max-width:650px){header{min-height:68px;padding:11px 12px}.gcm-logo-main{font-size:20px}header>.mono{display:none}}
